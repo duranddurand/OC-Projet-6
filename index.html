@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="fr">
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JustStreamIt</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+</head>
 
-  <body>
+<body>
     <!-- HEADER -->
 
     <header>
-      <div class="logo">
-        <img src="asset/logo.png" alt="JSI - logo" />
-      </div>
-      <nav class="navbar">
-        <a href="#">Accueil</a>
-        <div class="dropdown">
-          <a href="#">Catégories</a>
-          <div class="dropdown-content">
-            <a href="#best-rated">Meilleurs Films</a>
-            <a href="#adventure">Aventure</a>
-            <a href="#sci-fi">Science-fiction</a>
-            <a href="#action">Action</a>
-          </div>
+        <div class="logo">
+            <img src="asset/logo.png" alt="JSI - logo" />
         </div>
-      </nav>
+        <nav class="navbar">
+            <a href="#">Accueil</a>
+            <div class="dropdown">
+                <a href="#">Catégories</a>
+                <div class="dropdown-content">
+                    <a href="#best-rated">Meilleurs Films</a>
+                    <a href="#adventure">Aventure</a>
+                    <a href="#sci-fi">Science-fiction</a>
+                    <a href="#action">Action</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- END OF HEADER -->
@@ -34,88 +35,67 @@
     <!-- MAIN -->
 
     <main>
-      <!-- the best ranked movie -->
-      <section class="banner" id="top-rated">
-        <div class="banner-data">
-          <h1 class="banner-title"></h1>
-          <p class="banner-intrigue"></p>
-          <a class="banner-play-button">Play</a>
-          <a class="banner-info-button">Plus d'information</a>
+
+        <!-- the best ranked movie -->
+        
+        <section class="banner" id="top-rated">
+            <div class="banner-data">
+                <h1 class="banner-title"></h1>
+                <p class="banner-intrigue"></p>
+                <a class="banner-play-button">Play</a>
+                <a class="banner-info-button">Plus d'information</a>
+            </div>
+        </section>
+
+        <div class="carousels">
+            
+            <!-- best ranked movies -->
+
+            <section class="carousel" id="best-rated">
+                <h1 class="carousel-title">Meilleurs Films</h1>
+
+                <div class="movies">
+                    <div class="left-arrow" onclick="scrollContainer('best-rated', 'previous')"></div>
+                    <div class="carousel-list"></div>
+                    <div class="right-arrow" onclick="scrollContainer('best-rated', 'next')"></div>
+                </div>
+            </section>
+
+            <!-- best ranked adventure movies -->
+
+            <section class="carousel" id="adventure">
+                <h1 class="carousel-title">Aventure</h1>
+
+                <div class="movies">
+                    <div class="left-arrow" onclick="scrollContainer('adventure', 'previous')"></div>
+                    <div class="carousel-list"></div>
+                    <div class="right-arrow" onclick="scrollContainer('adventure', 'next')"></div>
+                </div>
+            </section>
+
+            <!-- best ranked scie-fi movies -->
+
+            <section class="carousel" id="sci-fi">
+                <h1 class="carousel-title">Science-Fiction</h1>
+
+                <div class="movies">
+                    <div class="left-arrow" onclick="scrollContainer('sci-fi', 'previous')"></div>
+                    <div class="carousel-list"></div>
+                    <div class="right-arrow" onclick="scrollContainer('sci-fi', 'next')"></div>
+                </div>
+            </section>
+
+            <!-- best ranked action movies -->
+
+            <section class="carousel" id="action">
+                <h1 class="carousel-title">Action</h1>
+                <div class="movies">
+                    <div class="left-arrow" onclick="scrollContainer('action', 'previous')"></div>
+                    <div class="carousel-list"></div>
+                    <div class="right-arrow" onclick="scrollContainer('action', 'next')"></div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      <div class="listings">
-        <!-- best ranked movies -->
-
-        <section class="carousel" id="best-rated">
-          <h1 class="carousel-title">Meilleurs Films</h1>
-
-          <div class="movies">
-            <div
-              class="left-arrow"
-              onclick="scrollContainer('best-rated', 'previous')"
-            ></div>
-            <div class="carousel-list"></div>
-            <div
-              class="right-arrow"
-              onclick="scrollContainer('best-rated', 'next')"
-            ></div>
-          </div>
-        </section>
-
-        <!-- best ranked adventure movies -->
-
-        <section class="carousel" id="adventure">
-          <h1 class="carousel-title">Aventure</h1>
-
-          <div class="movies">
-            <div
-              class="left-arrow"
-              onclick="scrollContainer('adventure', 'previous')"
-            ></div>
-            <div class="carousel-list"></div>
-            <div
-              class="right-arrow"
-              onclick="scrollContainer('adventure', 'next')"
-            ></div>
-          </div>
-        </section>
-
-        <!-- best ranked scie-fi movies -->
-
-        <section class="carousel" id="sci-fi">
-          <h1 class="carousel-title">Science-Fiction</h1>
-
-          <div class="movies">
-            <div
-              class="left-arrow"
-              onclick="scrollContainer('sci-fi', 'previous')"
-            ></div>
-            <div class="carousel-list"></div>
-            <div
-              class="right-arrow"
-              onclick="scrollContainer('sci-fi', 'next')"
-            ></div>
-          </div>
-        </section>
-
-        <!-- best ranked action movies -->
-
-        <section class="carousel" id="action">
-          <h1 class="carousel-title">Action</h1>
-          <div class="movies">
-            <div
-              class="left-arrow"
-              onclick="scrollContainer('action', 'previous')"
-            ></div>
-            <div class="carousel-list"></div>
-            <div
-              class="right-arrow"
-              onclick="scrollContainer('action', 'next')"
-            ></div>
-          </div>
-        </section>
-      </div>
     </main>
 
     <!-- END OF MAIN -->
@@ -123,23 +103,23 @@
     <!-- MODAL WINDOW -->
 
     <div class="modal" id="movie">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
 
-        <img class="movie-poster" src="#" alt="Affiche du film" />
+            <img class="movie-poster" src="#" alt="Affiche du film" />
 
-        <p class="movie-title"></p>
-        <p class="movie-genre"></p>
-        <p class="movie-release-date"></p>
-        <p class="movie-rated"></p>
-        <p class="movie-rating-imdb"></p>
-        <p class="movie-director"></p>
-        <p class="movie-list-actors"></p>
-        <p class="movie-duration"></p>
-        <p class="movie-country-origin"></p>
-        <p class="movie-box-office-result"></p>
-        <p class="movie-description"></p>
-      </div>
+            <p class="movie-title"></p>
+            <p class="movie-genre"></p>
+            <p class="movie-release-date"></p>
+            <p class="movie-rated"></p>
+            <p class="movie-rating-imdb"></p>
+            <p class="movie-director"></p>
+            <p class="movie-list-actors"></p>
+            <p class="movie-duration"></p>
+            <p class="movie-country-origin"></p>
+            <p class="movie-box-office-result"></p>
+            <p class="movie-description"></p>
+        </div>
     </div>
 
     <!-- END OF MODAL WINDOW -->
@@ -147,10 +127,11 @@
     <!-- FOOTER -->
 
     <footer>
-      <p>Just Stream It! Tous droits réservés.</p>
+        <p>Just Stream It! Tous droits réservés.</p>
     </footer>
 
     <!-- END OF FOOTER -->
 
-  </body>
+</body>
+
 </html>
