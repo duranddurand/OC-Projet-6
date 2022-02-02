@@ -1,0 +1,27 @@
+
+body{
+    display: block;
+}
+
+.logo{
+    width: auto;
+    max-height: 120px;
+}
+
+.banner{
+    background-image: url("asset/iu-9.jpeg");
+    height: 33vh;
+}
+
+.banner-data{
+    width: 50%;
+}
+
+footer{
+    display: inline;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
