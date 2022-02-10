@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JustStreamIt</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/loader.css" />
+    
 </head>
 
 <body>
@@ -17,17 +18,19 @@
         <div class="logo">
             <img src="asset/logo.png" alt="JSI - logo" />
         </div>
-        <nav class="navbar">
+        <div>
+            <nav class="navbar">
             <a href="#">Accueil</a>
             <div class="dropdown">
                 <a href="#">Catégories</a>
                 <div class="dropdown-content">
                     <a href="#best-rated">Meilleurs Films</a>
-                    <a href="#adventure">Aventure</a>
-                    <a href="#sci-fi">Science-fiction</a>
-                    <a href="#action">Action</a>
+                    <a href="#Adventure">Aventure</a>
+                    <a href="#Sci-Fi">Science-fiction</a>
+                    <a href="#Action">Action</a>
                 </div>
             </div>
+            </nav>
         </nav>
     </header>
 
@@ -62,38 +65,38 @@
                 </div>
             </section>
 
-            <!-- best ranked adventure movies -->
+            <!-- best ranked Adventure movies -->
 
-            <section class="carousel" id="adventure">
+            <section class="carousel" id="Adventure">
                 <h1 class="carousel-title">Aventure</h1>
 
                 <div class="movies">
-                    <div class="left-arrow" onclick="scrollContainer('adventure', 'previous')"></div>
+                    <div class="left-arrow" onclick="scrollContainer('Adventure', 'previous')"></div>
                     <div class="carousel-list"></div>
-                    <div class="right-arrow" onclick="scrollContainer('adventure', 'next')"></div>
+                    <div class="right-arrow" onclick="scrollContainer('Adventure', 'next')"></div>
                 </div>
             </section>
 
             <!-- best ranked scie-fi movies -->
 
-            <section class="carousel" id="sci-fi">
+            <section class="carousel" id="Sci-Fi">
                 <h1 class="carousel-title">Science-Fiction</h1>
 
                 <div class="movies">
-                    <div class="left-arrow" onclick="scrollContainer('sci-fi', 'previous')"></div>
+                    <div class="left-arrow" onclick="scrollContainer('Sci-Fi', 'previous')"></div>
                     <div class="carousel-list"></div>
-                    <div class="right-arrow" onclick="scrollContainer('sci-fi', 'next')"></div>
+                    <div class="right-arrow" onclick="scrollContainer('Sci-Fi', 'next')"></div>
                 </div>
             </section>
 
-            <!-- best ranked action movies -->
+            <!-- best ranked Action movies -->
 
-            <section class="carousel" id="action">
+            <section class="carousel" id="Action">
                 <h1 class="carousel-title">Action</h1>
                 <div class="movies">
-                    <div class="left-arrow" onclick="scrollContainer('action', 'previous')"></div>
+                    <div class="left-arrow" onclick="scrollContainer('Action', 'previous')"></div>
                     <div class="carousel-list"></div>
-                    <div class="right-arrow" onclick="scrollContainer('action', 'next')"></div>
+                    <div class="right-arrow" onclick="scrollContainer('Action', 'next')"></div>
                 </div>
             </section>
         </div>
@@ -126,13 +129,13 @@
     <!-- END OF MODAL WINDOW -->
 
     <!-- FOOTER -->
-
+        
     <footer>
         <p>Just Stream It! Tous droits réservés.</p>
     </footer>
 
     <!-- END OF FOOTER -->
-
+    <script src="app.js"></script>
 </body>
 
 </html>

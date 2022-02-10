@@ -1,0 +1,432 @@
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: listings;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5%;
+}
+
+#top-rated-movie {
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+#top-rated-movie .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+#top-rated-movie .movie-title {
+  position: relative;
+  bottom: 18px;
+  right: 150px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#top-rated-movie .movie-button-play {
+  position: relative;
+  top: 25px;
+  right: 300px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #e60606;
+  color: white;
+  text-decoration: none;
+}
+
+#top-rated-movie .movie-button-info {
+  position: relative;
+  top: 25px;
+  right: 290px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px 10px;
+  border-radius: 30px;
+  background-color: #e60606;
+  color: white;
+  text-decoration: none;
+}
+
+#top-rated-movie .movies-carousel {
+  position: relative;
+  right: 200px;
+  cursor: pointer;
+}
+
+#best-rated-movies {
+  display: -ms-grid;
+  display: grid;
+}
+
+#best-rated-movies .movies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+#best-rated-movies .movies-arrow-left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  cursor: pointer;
+}
+
+#best-rated-movies .movies-arrow-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+#best-rated-movies .movies-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#best-rated-movies .movies .movies-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#adventure-category-movies {
+  display: -ms-grid;
+  display: grid;
+}
+
+#adventure-category-movies .movies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+#adventure-category-movies .movies-arrow-left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  cursor: pointer;
+}
+
+#adventure-category-movies .movies-arrow-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+#adventure-category-movies .movies-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#adventure-category-movies .movies .movies-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#horror-category-movies {
+  display: -ms-grid;
+  display: grid;
+}
+
+#horror-category-movies .movies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+#horror-category-movies .movies-arrow-left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  cursor: pointer;
+}
+
+#horror-category-movies .movies-arrow-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+#horror-category-movies .movies-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#horror-category-movies .movies .movies-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#crime-category-movies {
+  display: -ms-grid;
+  display: grid;
+}
+
+#crime-category-movies .movies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+#crime-category-movies .movies-arrow-left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  cursor: pointer;
+}
+
+#crime-category-movies .movies-arrow-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  border: 5px solid white;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+#crime-category-movies .movies-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#crime-category-movies .movies .movies-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  gap: 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=carousels.css.map */
