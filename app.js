@@ -106,7 +106,7 @@ function updateCarouselItem(movie, carouselDivId) {
 }
 
 const pageCounter = []
-pageCounter["best-rated-movies"] = { page: 1, genre: "" }
+pageCounter["best-rated"] = { page: 1, genre: "" }
 pageCounter["Adventure"] = { page: 1, genre: "Adventure" }
 pageCounter["Sci-Fi"] = { page: 1, genre: "Sci-Fi" }
 pageCounter["Action"] = { page: 1, genre: "Action" }
@@ -127,24 +127,7 @@ function scrollContainer(container, direction) {
         })
     }
 }
-function newFunc(event) {
-    var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-}
 /* Modal */
 const onImgClicked = function(event) {
     const modal = document.getElementById("movie-modal");
@@ -162,7 +145,7 @@ const onImgClicked = function(event) {
             document.getElementsByClassName("movie-rating-imdb")[0].innerHTML = `<p><strong>Score IMDB: </strong>${movie.imdb_score}</p>`
             document.getElementsByClassName("movie-director")[0].innerHTML = `<p><strong>Réalisateur(s): </strong>${movie.directors}</p>`
             document.getElementsByClassName("movie-list-actors")[0].innerHTML = `<p><strong>Liste des acteurs: </strong>${movie.actors}</p>`
-            document.getElementsByClassName("movie-duration")[0].innerHTML = `<p><strong>Duration: </strong>${movie.duration} minutes </p>`
+            document.getElementsByClassName("movie-duration")[0].innerHTML = `<p><strong>Durée: </strong>${movie.duration} minutes </p>`
             document.getElementsByClassName("movie-country-origin")[0].innerHTML = `<p><strong>Origine(s): </strong>${movie.countries}</p>`
             document.getElementsByClassName("movie-box-office-result")[0].innerHTML = `<p><strong>Résultat du box office: </strong>${movie.worldwide_gross_income ?? "Not available"}</p>`
             document.getElementsByClassName("movie-description")[0].innerHTML = `<p><strong>Synopsis: </strong>${movie.description}</p>`

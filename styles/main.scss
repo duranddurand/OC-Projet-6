@@ -12,16 +12,20 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  margin: auto;
   margin: 0;
+  padding-top: 200px;
   background-color: rgb(46, 49, 54);
 }
 
 header {
   display: flex;
   flex-flow: row nowrap;
-
-  padding: 21px;
+  position: fixed;
+  top: 0;
+  max-height: 15vh;
+  width: 100%;
+  z-index: 100;
+  padding: 5px;
   justify-content: space-between;
   align-items: center;
   background: rgb(3, 3, 3);
@@ -42,7 +46,6 @@ header {
     justify-content: flex-end;
     gap: 21px;
     width: 100%;
-    height: 100px;
     align-items: center;
 
     a {
@@ -58,6 +61,7 @@ header {
     .dropdown {
       position: relative;
       display: inline-block;
+      z-index: 5;
     }
     .dropdown-content {
       display: none;
@@ -97,24 +101,23 @@ header {
 #movie-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   height:100%;
   justify-content: center;
   align-items: center;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 
   /* Modal Content/Box */
   .modal-content {
     display: block;
-    background-color: rgb(46, 49, 54);
+    background-color: rgba(0, 0, 0, 0.6);
     max-width: 60%;
     max-height: 80%;
-    border: 1px solid grey;
+    border-radius: 20px;
     color: white;
-    padding: 20px;
-    overflow: scroll;
+    padding: 40px;
 
     > .text-content {
       display: block;
@@ -125,13 +128,10 @@ header {
       overflow: hidden;
       max-height: 30vh;
       width: 100%;
-      gap: 40px;
+      justify-content: space-between;
 
       > img {
         position: relative;
-        border: 1px solid grey;
-        width: inherit;
-        max-width: 30%;
       }
       > p {
         width: 70%;
@@ -144,16 +144,18 @@ header {
 
   /* The Close Button */
   .close-modal {
+    position: absolute;
+    
     color: #aaa;
     font-size: 50px;
     font-weight: bold;
+    transition: transform .3s;
   }
 
   .close-modal:hover,
   .close-modal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+
+    transform: rotate(90deg);
   }
 }
 footer {

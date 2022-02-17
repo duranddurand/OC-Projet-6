@@ -13,8 +13,8 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  margin: auto;
   margin: 0;
+  padding-top: 200px;
   background-color: #2e3136;
 }
 
@@ -26,7 +26,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  padding: 21px;
+  position: fixed;
+  top: 0;
+  max-height: 15vh;
+  width: 100%;
+  z-index: 100;
+  padding: 5px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -61,7 +66,6 @@ header .navbar {
           justify-content: flex-end;
   gap: 21px;
   width: 100%;
-  height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -84,6 +88,7 @@ header .navbar a {
 header .navbar .dropdown {
   position: relative;
   display: inline-block;
+  z-index: 5;
 }
 
 header .navbar .dropdown-content {
@@ -131,7 +136,7 @@ header .navbar .dropdown-content a:hover {
 #movie-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   height: 100%;
   -webkit-box-pack: center;
@@ -141,20 +146,19 @@ header .navbar .dropdown-content a:hover {
       -ms-flex-align: center;
           align-items: center;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   /* Modal Content/Box */
   /* The Close Button */
 }
 
 #movie-modal .modal-content {
   display: block;
-  background-color: #2e3136;
+  background-color: rgba(0, 0, 0, 0.6);
   max-width: 60%;
   max-height: 80%;
-  border: 1px solid grey;
+  border-radius: 20px;
   color: white;
-  padding: 20px;
-  overflow: scroll;
+  padding: 40px;
 }
 
 #movie-modal .modal-content > .text-content {
@@ -168,14 +172,13 @@ header .navbar .dropdown-content a:hover {
   overflow: hidden;
   max-height: 30vh;
   width: 100%;
-  gap: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #movie-modal .modal-content .first-content > img {
   position: relative;
-  border: 1px solid grey;
-  width: inherit;
-  max-width: 30%;
 }
 
 #movie-modal .modal-content .first-content > p {
@@ -186,16 +189,20 @@ header .navbar .dropdown-content a:hover {
 }
 
 #movie-modal .close-modal {
+  position: absolute;
   color: #aaa;
   font-size: 50px;
   font-weight: bold;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 #movie-modal .close-modal:hover,
 #movie-modal .close-modal:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 footer {
