@@ -23,7 +23,7 @@ function addElement () {
   // crée un nouvel élément div
   var newDiv = document.createElement("div");
   // et lui donne un peu de contenu
-  var newContent = document.createTextNode(fetchMovies("", 1)[0]["title"]);
+  var newContent = document.createTextNode(fetchMovies("", 1));
   // ajoute le nœud texte au nouveau div créé
   newDiv.appendChild(newContent);
 

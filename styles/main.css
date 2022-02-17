@@ -1,4 +1,5 @@
 html {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
   color: lightgrey;
 }
@@ -9,8 +10,11 @@ html a {
 
 body {
   display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
   margin: 0;
-      grid-template-areas: "header" "listings" "footer";
   background-color: #2e3136;
 }
 
@@ -18,13 +22,14 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   padding: 21px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,117 +43,167 @@ header .logo {
 }
 
 header .logo img {
-  width: 200px;
+  width: 50px;
   padding: 10px;
-  background-color: lightgray;
   border-radius: 10px;
 }
 
 header .navbar {
-  display: -ms-grid;
-  display: grid;
-  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  grid-auto-flow: column;
-  gap: 5vw;
+  gap: 21px;
+  width: 100%;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .navbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
+  color: lightgray;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .navbar .dropdown {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 header .navbar .dropdown-content {
   display: none;
   position: absolute;
-  width: 13em;
+  margin: 10px;
+  width: 240px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  right: 0px;
+  top: 10px;
   overflow: auto;
-  border-radius: 10px;
-  background-color: #2e2e2e;
+  background-color: #202020;
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
-header .navbar .dropdown:hover .dropdown-content {
+header .navbar .show {
   display: block;
 }
 
 header .navbar .dropdown-content a {
-  display: block;
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: auto;
+  width: auto;
+  color: lightgray;
+  padding: 15px;
+  font-size: small;
   font-style: bold;
   text-decoration: none;
 }
 
 header .navbar .dropdown-content a:hover {
   color: white;
-  background-color: #141414;
+  background-color: #2e2e2e;
 }
 
-.modal {
+#movie-modal {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Modal Content/Box */
+  /* The Close Button */
 }
 
-/* Modal Content/Box */
-.modal-content {
+#movie-modal .modal-content {
+  display: block;
   background-color: #2e3136;
-  margin: 15% auto;
-  padding: 20px;
+  max-width: 60%;
+  max-height: 80%;
   border: 1px solid grey;
   color: white;
-  height: 40%;
-  width: 50%;
-  overflow: hidden;
+  padding: 20px;
+  overflow: scroll;
 }
 
-.modal-content > img {
+#movie-modal .modal-content > .text-content {
+  display: block;
+}
+
+#movie-modal .modal-content .first-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  max-height: 30vh;
+  width: 100%;
+  gap: 40px;
+}
+
+#movie-modal .modal-content .first-content > img {
   position: relative;
   border: 1px solid grey;
-  top: 100px;
+  width: inherit;
+  max-width: 30%;
 }
 
-.modal-content > p {
+#movie-modal .modal-content .first-content > p {
   width: 70%;
   position: relative;
-  left: 18%;
-  bottom: 250px;
   display: block;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
 
-/* The Close Button */
-.close-modal {
+#movie-modal .close-modal {
   color: #aaa;
-  float: right;
   font-size: 50px;
   font-weight: bold;
 }
 
-.close-modal:hover,
-.close-modal:focus {
+#movie-modal .close-modal:hover,
+#movie-modal .close-modal:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
 footer {
-  background-color: #707683;
-  border: 1px black solid;
+  position: fixed;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background-color: #2e2e2e;
   text-align: center;
   color: lightgray;
 }
