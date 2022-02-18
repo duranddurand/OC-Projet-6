@@ -1,8 +1,5 @@
 section.carousel {
-  display: inline;
-  position: relative;
   margin: 0;
-  height: auto;
   padding: 10px;
 }
 
@@ -17,37 +14,41 @@ section.carousel .carousel-title {
 }
 
 section.carousel div.movies {
-  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 section.carousel div.movies .arrow {
   position: absolute;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section.carousel div.movies .arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 section.carousel div.movies .arrow img {
-  height: auto;
+  height: 50px;
   padding: 20px;
-  background-color: rgba(179, 67, 67, 0.568);
-  max-height: 80px;
 }
 
 section.carousel div.movies .arrow.left-arrow {
-  left: 30px;
+  left: 0;
 }
 
 section.carousel div.movies .arrow.right-arrow {
-  right: 30px;
+  right: 0;
 }
 
 section.carousel div.movies .carousel-list {
@@ -68,7 +69,8 @@ section.carousel div.movies .carousel-list {
 }
 
 section.carousel div.movies .carousel-list img {
-  width: auto;
-  margin: 0px;
+  width: 100%;
+  height: auto;
+  margin: 3px;
 }
 /*# sourceMappingURL=carousels.css.map */

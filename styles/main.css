@@ -161,14 +161,11 @@ main {
   max-height: 80%;
   border-radius: 20px;
   color: white;
-  padding: 40px;
+  padding: 50px;
+  position: absolute;
 }
 
-#movie-modal .modal-content > .text-content {
-  display: block;
-}
-
-#movie-modal .modal-content .first-content {
+#movie-modal .modal-content div.first-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,11 +177,15 @@ main {
           justify-content: space-between;
 }
 
-#movie-modal .modal-content .first-content > img {
+#movie-modal .modal-content div.first-content div.right-column {
+  padding: 20px;
+}
+
+#movie-modal .modal-content div.first-content > img {
   position: relative;
 }
 
-#movie-modal .modal-content .first-content > p {
+#movie-modal .modal-content div.first-content > p {
   width: 70%;
   position: relative;
   display: block;
@@ -193,19 +194,23 @@ main {
 
 #movie-modal .close-modal {
   position: absolute;
+  display: block;
   color: #aaa;
   font-size: 50px;
   font-weight: bold;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  top: 10px;
+  right: 30px;
 }
 
 #movie-modal .close-modal:hover,
 #movie-modal .close-modal:focus {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  cursor: pointer;
 }
 
 footer {

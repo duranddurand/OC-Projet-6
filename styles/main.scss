@@ -106,7 +106,7 @@ main {
   position: fixed;
   z-index: 10;
   width: 100%;
-  height:100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -120,18 +120,20 @@ main {
     max-height: 80%;
     border-radius: 20px;
     color: white;
-    padding: 40px;
+    padding: 50px;
+    position: absolute;
 
-    > .text-content {
-      display: block;
-    }
 
-    .first-content {
+    div.first-content {
       display: flex;
       overflow: hidden;
       max-height: 30vh;
       width: 100%;
       justify-content: space-between;
+
+      div.right-column {
+        padding: 20px;
+      }
 
       > img {
         position: relative;
@@ -148,17 +150,19 @@ main {
   /* The Close Button */
   .close-modal {
     position: absolute;
-    
+    display: block;
     color: #aaa;
     font-size: 50px;
     font-weight: bold;
-    transition: transform .3s;
+    transition: transform 0.3s;
+    top: 10px;
+    right: 30px;
   }
 
   .close-modal:hover,
   .close-modal:focus {
-
     transform: rotate(90deg);
+    cursor: pointer;
   }
 }
 footer {
