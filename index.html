@@ -39,12 +39,15 @@
 
         <!-- the best ranked movie -->
 
-        <section class="banner" id="top-rated">
-            <div class="banner-data">
-                <h1 class="banner-title"></h1>
-                <p class="banner-intrigue"></p>
-                <a class="banner-play-button">Play</a>
-                <a class="banner-info-button">Plus d'information</a>
+        <section class="banner carousel" id="top-rated">
+            <div class="banner-data movies">
+                <div>
+                    <h1 class="banner-title"></h1>
+                    <p class="banner-intrigue"></p>
+                    <a class="banner-play-button">Play</a>
+                    <a class="banner-info-button">Plus d'information</a>
+                </div>
+                <div class="carousel-list" id="single-movie"></div>
             </div>
         </section>
 
@@ -122,7 +125,7 @@
 
     <div class="myModal" id="movie-modal">
         <div class="modal-content">
-            
+
             <div class="first-content">
                 <img class="movie-poster" src="#" alt="Affiche du film" />
                 <div class="right-column">

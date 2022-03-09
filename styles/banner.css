@@ -1,0 +1,17 @@
+section.banner {
+  height: 50vh;
+  border: 3px solid white;
+  overflow: hidden;
+}
+
+section.banner div.banner-data {
+  height: auto;
+}
+
+section.banner div.banner-data div#single-movie img {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+/*# sourceMappingURL=banner.css.map */

@@ -20,7 +20,7 @@ section.carousel {
       cursor: pointer;
       height: 100%;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
       &:hover {
         background-color: rgba(0, 0, 0, 0.8);
       }
@@ -52,6 +52,7 @@ section.carousel {
 
         margin: 3px;
       }
+
     }
   }
 }
